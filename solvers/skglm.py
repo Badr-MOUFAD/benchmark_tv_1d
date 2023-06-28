@@ -71,8 +71,7 @@ class Solver(BaseSolver):
         z = self.clf.coef_.flatten()
         self.u = np.cumsum(z)
 
-    @staticmethod
-    def get_next(previous):
+    def get_next(self, previous):
         """Linear growth for n_iter."""
         return previous + 1
 

@@ -65,8 +65,7 @@ class Solver(BaseSolver):
         c = S @ (self.y - AL @ z) / (S @ S)
         self.u = np.r_[0, np.cumsum(z)] + c
 
-    @staticmethod
-    def get_next(previous):
+    def get_next(self, previous):
         """Linear growth for n_iter."""
         return previous + 1
 
